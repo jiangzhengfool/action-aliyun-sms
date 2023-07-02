@@ -19,7 +19,8 @@ public class SmsAutoConfigurationDemo {
 
     @Test
     public void sendVerificationCode() {
-        final String phoneNumber = System.getenv("aliyun.sms.authentication.phoneNumber");
-        this.smsClient.sendVerificationCode("authentication", phoneNumber);
+//        final String phoneNumber = System.getenv("aliyun.sms.authentication.phoneNumber");
+        this.smsClient.sendVerificationCode("authentication", "18279268256");
+//        this.smsClient.send("authentication");
     }
 }

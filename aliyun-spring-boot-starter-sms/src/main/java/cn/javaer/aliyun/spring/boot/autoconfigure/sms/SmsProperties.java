@@ -18,6 +18,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 
 import java.util.Map;
 
@@ -29,6 +30,7 @@ import java.util.Map;
 @Getter
 @Setter
 @ConfigurationProperties(prefix = "aliyun.sms")
+@PropertySource(encoding = "UTF-8", value = "classpath:application.properties", ignoreResourceNotFound = true)
 public class SmsProperties implements InitializingBean {
 
     private String accessKeyId;
